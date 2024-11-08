@@ -1,0 +1,19 @@
+.schedule-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 7 columns for each day */
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .day {
+    background-color: #f3f3f3;
+    border-radius: 2px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assignment {
+    margin-top: 10px;
+  }
+  
