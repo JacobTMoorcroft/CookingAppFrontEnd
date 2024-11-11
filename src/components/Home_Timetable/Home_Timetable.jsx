@@ -1,4 +1,4 @@
-import './HomeTimetable.css';
+import './Home_Timetable.css';
 import {getAllSchedule} from '../../api/api.jsx';
 import {useEffect, useState } from 'react';
 

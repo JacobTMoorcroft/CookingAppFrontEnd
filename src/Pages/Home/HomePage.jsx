@@ -1,5 +1,5 @@
 import './HomePage.css';
-import HomeTimetable from '../../components/HomeTimetable/HomeTimetable.jsx';
+import HomeTimetable from '../../components/Home_Timetable/Home_Timetable.jsx';
 
 function Home() {
 
