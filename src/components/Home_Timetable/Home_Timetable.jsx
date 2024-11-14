@@ -2,7 +2,7 @@ import './Home_Timetable.css';
 import {getAllSchedule} from '../../api/api.jsx';
 import {useEffect, useState } from 'react';
 
-function HomeTimetable() {
+function Home_Timetable() {
   const [schedule, setSchedule] = useState([]);
 
   useEffect(() => {
@@ -42,4 +42,4 @@ function HomeTimetable() {
   );
 }
 
-export default HomeTimetable;
+export default Home_Timetable;

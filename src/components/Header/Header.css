@@ -8,6 +8,7 @@
     color: rgb(255, 255, 255);
     width: 100%;
     box-sizing: border-box;
+    box-shadow: 3px 4px 8px rgba(59, 59, 59, 0.521);
   }
   
   .logo img {
@@ -17,7 +18,7 @@
   .nav-list {
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
   }
   
   .nav-list li a {
@@ -25,11 +26,13 @@
     text-decoration: none;
     font-weight: bold;
     transition: color 0.1s ease;
-    font-size: 1.9em;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(39, 39, 39, 0.829);
   }
   
   .nav-list li a:hover {
     color: #ddd;
+    box-shadow: 0px 0px 5px rgba(80, 74, 74, 0.521);
   }
   
   .nav-list li a:active{

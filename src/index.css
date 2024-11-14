@@ -1,8 +1,12 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root{
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(97, 97, 97);
 }
 
 body {
     margin: 0;
+    font-family: 'Inter', sans-serif;
+
 }

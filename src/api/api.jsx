@@ -39,3 +39,8 @@ export const deleteDish = async (id) => {
     const response = await api.get(`/schedule`);
     return response.data;
   };
+
+  export const postProfile = async (profile) => {
+    const response = await api.post('/profiles', profile);
+    return response.data;
+  }
