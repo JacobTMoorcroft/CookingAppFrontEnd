@@ -44,3 +44,8 @@ export const deleteDish = async (id) => {
     const response = await api.post('/profiles', profile);
     return response.data;
   }
+
+  export const deleteProfile = async (profileId) => {
+    const response = await api.delete(`/profiles/${profileId}`);
+    return response.data
+  }
