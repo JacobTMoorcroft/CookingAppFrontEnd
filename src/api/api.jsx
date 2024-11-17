@@ -5,30 +5,6 @@ const api = axios.create({
   baseURL: 'http://localhost:8080/api', // Replace with your Spring Boot API base URL
 });
 
-// Fetch all dishes
-export const fetchDishes = async () => {
-  const response = await api.get('/dishes');
-  return response.data;
-};
-
-// Add a new dish
-export const addDish = async (dish) => {
-  const response = await api.post('/dishes', dish);
-  return response.data;
-};
-
-// Fetch a single dish by ID
-export const fetchDishById = async (id) => {
-  const response = await api.get(`/dishes/${id}`);
-  return response.data;
-};
-
-// Delete a dish by ID
-export const deleteDish = async (id) => {
-  const response = await api.delete(`/dishes/${id}`);
-  return response.data;
-};
-
 // get all family profiles
   export const getAllProfiles = async () => {
     const response = await api.get(`/profiles`);
@@ -47,5 +23,10 @@ export const deleteDish = async (id) => {
 
   export const deleteProfile = async (profileId) => {
     const response = await api.delete(`/profiles/${profileId}`);
-    return response.data
+    return response.data;
+  }
+
+  export const patchProfile = async (profileId, profile) => {
+    const response = await api.patch(`/profiles/${profileId}`, profile);
+    return response.data;
   }

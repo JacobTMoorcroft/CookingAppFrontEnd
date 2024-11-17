@@ -1,4 +1,4 @@
-import './DropdownMenu.css'
+import './DropdownMenuDelete.css'
 
 import { useEffect, useState } from 'react';
 import { getAllProfiles, deleteProfile } from '../../api/api';
