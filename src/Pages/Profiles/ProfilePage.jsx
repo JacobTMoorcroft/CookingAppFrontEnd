@@ -1,10 +1,10 @@
 import './ProfilePage.css';
 import Profiles_List from '../../components/Profiles_List/Profiles_List.jsx';
 import AddProfile from '../../components/AddProfile/AddProfile.jsx'
-import DropdownMenu from '../../components/DropdownMenuDelete/DropdownMenuDelete.jsx';
+import DropdownMenu from '../../components/DropdownMenuProfileDelete/DropdownMenuProfileDelete.jsx';
 import PatchProfileData from '../../components/PatchProfile/PatchProfile.jsx';
 
-function Home() {
+function ProfilePage() {
 
   return (
     <div className="ProfilePage">
@@ -16,4 +16,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default ProfilePage;
