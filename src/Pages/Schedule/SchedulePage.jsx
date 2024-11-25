@@ -1,11 +1,11 @@
 import './SchedulePage.css';
-import TimeTable from '../../components/TimeTableForSchedule/TimeTable.jsx'
+import ParentComponent from '../../components/ChangeSchedule/ChangeSchedule.jsx'
 
 function SchedulePage() {
 
   return (
     <div className="SchedulePage">
-    <TimeTable />
+    <ParentComponent />
     </div>
   );
 }

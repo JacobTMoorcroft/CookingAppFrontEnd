@@ -2,9 +2,9 @@ import './TimeTable.css';
 import {getAllSchedule} from '../../api/api.jsx';
 import {useEffect, useState } from 'react';
 
-function Home_Timetable() {
+function Home_Timetable({refreshKey, selectedDay, setSelectedDay}) {
   const [schedule, setSchedule] = useState([]);
-  const [selectedDay, setSelectedDay] = useState(null);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +21,7 @@ function Home_Timetable() {
     };
     fetchData();
 
-  }, []);
+  }, [refreshKey]);
 
   const sortDaysByIndex = (schedule) => {
     return schedule.sort((a, b) => a.day_id - b.day_id);
@@ -37,7 +37,7 @@ function Home_Timetable() {
       {schedule.map((day) => (
         <div 
         className={`schedulePageDay ${selectedDay?.day_id === day.day_id ? `selected` : ''}`} 
-        key={day.id}
+        key={day.day_id}
         onClick={() => handleDayClick(day)}
         >
           <h3>{day.day}</h3>

@@ -30,3 +30,13 @@ const api = axios.create({
     const response = await api.patch(`/profiles/${profileId}`, profile);
     return response.data;
   }
+
+  export const getAllDishes = async () => {
+    const response = await api.get(`/dishes`);
+    return response.data;
+  }
+
+  export const patchSchedule = async (day, schedule) => {
+    const response = await api.patch(`/schedule/${day}`, schedule);
+    return response.data
+  }
