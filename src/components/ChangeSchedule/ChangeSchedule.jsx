@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Dropdown from '../DropDownMenu/DropDownMenu.jsx';
 import {getAllProfiles, getAllDishes, patchSchedule} from '../../api/api.jsx'
 import TimeTable from '../TimeTableForSchedule/TimeTable.jsx'
+import "./changeSchedule.css";
 
 const ParentComponent = () => {
   const [dropdownProfile, setDropdownProfile] = useState(null);
@@ -68,13 +69,14 @@ const ParentComponent = () => {
 
 
   return (
-    <div>
+    <div className='entireBlock'>
 
       <div>
         <TimeTable refreshKey={refreshKey} selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
       </div>
+      <h3 className='selectDay'>Select a Day to change</h3>
 
-      <h1>Manage Dropdown Selections</h1>
+      <h1 className='selectDay'>Manage Dropdown Selections</h1>
       <Dropdown
         label="Set Profile"
         options={profiles} 
@@ -87,7 +89,7 @@ const ParentComponent = () => {
         selectedValue={dropdownDishes}
         setSelectedValue={setDropdownDishes}
       />
-      <button onClick={handleSave}>Save</button>
+      <button onClick={handleSave} className="save-Button">Save</button>
     </div>
   );
 };

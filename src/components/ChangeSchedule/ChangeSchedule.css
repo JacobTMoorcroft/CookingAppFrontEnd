@@ -7,21 +7,9 @@
   .day {
     border: 1px solid #ccc;
     padding: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
   }
   
-  .day:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.02);
-  }
-  
-  .day.selected {
-    background-color: #d4edda;
-    border-color: #155724;
-    color: #155724;
-  }
-  
+
   .assignment {
     margin-top: 0.5rem;
   }
@@ -33,3 +21,25 @@
     background-color: #f8f9fa;
   }
   
+  .selectDay{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .save-Button {
+    display: block; 
+    margin: 20px auto; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    background-color: #005ec2;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+  }
+
+  .save-Button:hover {
+    background-color: #00346b; 
+  }

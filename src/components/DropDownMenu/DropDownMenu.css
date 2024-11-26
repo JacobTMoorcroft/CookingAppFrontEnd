@@ -1,0 +1,35 @@
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers both horizontally and vertically */
+    margin: 20px auto;
+  }
+  
+  .dropdown-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Aligns the text center */
+  }
+  
+  .dropdown-select {
+    width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Centers the text inside the dropdown */
+    background-color: #f9f9f9;
+    appearance: none; /* Removes browser-specific styles for consistency */
+    outline: none;
+  }
+  
+  .dropdown-select:focus {
+    border-color: #007bff; /* Highlights border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds subtle shadow */
+  }
+  
+  .dropdown-container option {
+    text-align: left; /* Ensures options remain left-aligned */
+  }
+  
