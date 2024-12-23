@@ -1,6 +1,7 @@
 import './Home_Timetable.css';
 import {getAllSchedule} from '../../api/api.jsx';
 import {useEffect, useState } from 'react';
+import emptyPlate from '../../assets/empty-plate.jpg';
 
 function Home_Timetable() {
   const [schedule, setSchedule] = useState([]);
@@ -36,6 +37,7 @@ function Home_Timetable() {
             <p>Name: {day.profiles && day.profiles.profile_name ? day.profiles.profile_name : "No one assigned" }</p>
             <p>Dish: {day.dishes && day.dishes.dish_name ? day.dishes.dish_name : "No dish assigned"}</p>
           </div>
+          <img className="dishImage" src={day.dishes?.imgURL || emptyPlate} alt="Dish image" />
         </div>
       ))}
     </div>

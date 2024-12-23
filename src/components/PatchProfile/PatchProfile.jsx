@@ -7,7 +7,6 @@ function PatchProfileData() {
   const [items, setItems] = useState([]);
   const [selectedItemId, setSelectedItem] = useState(''); 
   const [nameInput, setNameInput] = useState('')
-  const [relationInput, setRelationInput] = useState('')
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -32,11 +31,11 @@ function PatchProfileData() {
     const patchDataId = selectedItemId;
 
     const newName = nameInput.trim()
-    const newRelation = relationInput.trim()
+
 
     const patchData = {
         profile_name: newName,
-        relation: newRelation,
+        
         
     };
 
@@ -78,15 +77,7 @@ function PatchProfileData() {
                     placeholder='Name'
                 />
     </div>
-            <div>
-                <label>Relation </label>
-                <input 
-                    type='text'
-                    value={relationInput}
-                    onChange={(e) => setRelationInput(e.target.value)}
-                    placeholder='Relation'
-                />
-            </div>
+
       <button type='submit'>Change Selected Profile</button>
     </form>
   );

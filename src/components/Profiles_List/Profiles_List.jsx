@@ -28,7 +28,6 @@ function Profiles_List() {
             {profiles.map((profile) => (
                 <div className='profiles' key={profile.id}>
                 <h4>Name: {profile.profile_name}</h4>
-                <h4>Relation: {profile.relation}</h4>
                </div>
             ))}
         </div>
