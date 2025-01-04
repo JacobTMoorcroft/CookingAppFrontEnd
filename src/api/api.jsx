@@ -40,3 +40,8 @@ const api = axios.create({
     const response = await api.patch(`/schedule/${day}`, schedule);
     return response.data
   }
+
+  export const clearSchedule = async () => {
+    const response = await api.delete(`/schedule/clear`)
+    return response.data;
+  }

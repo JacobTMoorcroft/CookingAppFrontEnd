@@ -1,11 +1,11 @@
 import './SchedulePage.css';
-import ParentComponent from '../../components/ChangeSchedule/ChangeSchedule.jsx'
+import MainComponent from '../../components/ChangeSchedule/ChangeSchedule.jsx'
 
 function SchedulePage() {
 
   return (
     <div className="SchedulePage">
-    <ParentComponent />
+    <MainComponent />
     </div>
   );
 }

@@ -27,7 +27,7 @@
     text-align: center;
   }
 
-  .save-Button {
+  .save-Button , .clear-Button{
     display: block; 
     margin: 20px auto; 
     padding: 10px 20px; 
@@ -40,6 +40,6 @@
     transition: background-color 0.3s;
   }
 
-  .save-Button:hover {
+  .save-Button:hover , .clear-Button:hover{
     background-color: #00346b; 
   }

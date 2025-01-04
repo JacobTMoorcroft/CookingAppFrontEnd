@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Dropdown from '../DropDownMenu/DropDownMenu.jsx';
-import {getAllProfiles, getAllDishes, patchSchedule} from '../../api/api.jsx'
+import {getAllProfiles, getAllDishes, patchSchedule, clearSchedule} from '../../api/api.jsx'
 import TimeTable from '../TimeTableForSchedule/TimeTable.jsx'
 import "./changeSchedule.css";
 
@@ -62,11 +62,24 @@ const ParentComponent = () => {
     
 
     setTimeout(() => {
-      setRefreshKey((prevKey) => prevKey + 1); // Increment refresh key after delay
-    }, 100);
+      setRefreshKey((prevKey) => prevKey + 1); 
+    }, 200);
 
   };
+  
+  const handleClear = async () => {
+    try {
+      const response = clearSchedule();
+      console.log(response)
+    } catch (error) {
+      console.log("Could not clear timetable" + error);
+    }
 
+    setTimeout(() => {
+      setRefreshKey((prevKey) => prevKey + 1);
+    }, 200)
+
+  }
 
   return (
     <div className='entireBlock'>
@@ -90,6 +103,7 @@ const ParentComponent = () => {
         setSelectedValue={setDropdownDishes}
       />
       <button onClick={handleSave} className="save-Button">Save</button>
+      <button onClick={handleClear} className="clear-Button">Clear Schedule</button>
     </div>
   );
 };
